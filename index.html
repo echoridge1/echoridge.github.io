@@ -9,18 +9,22 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: url('unnamed.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       text-align: center;
+      backdrop-filter: blur(4px);
     }
 
     .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
       max-width: 600px;
-      padding: 20px;
     }
 
     h1 {
@@ -59,6 +63,6 @@
   <div class="container">
     <h1>Echoridge</h1>
     <p>We're working hard to bring something amazing. Stay tuned!</p>
-    </div>
+  </div>
 </body>
 </html>

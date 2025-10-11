@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for supporting Echo Ridge Retreat. Your contribution helps provide healing experiences through nature and creativity.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Thank You | Echo Ridge Retreat</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/accessibility.css">
+</head>
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary navigation">
+        <div class="navbar-brand">
+          <a href="/index.html" class="logo-link">
+            <h1 class="logo">Echo Ridge Retreat</h1>
+          </a>
+          <button
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Toggle navigation menu">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+        <ul id="primary-navigation" class="nav-menu hide-mobile" role="list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/retreat.html">The Retreat</a></li>
+          <li><a href="/photographs.html">Photographs</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Thank You Hero Section -->
+    <section class="section-xl">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+
+          <!-- Success Icon -->
+          <div style="margin-bottom: var(--spacing-lg);">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="40" r="38" stroke="#5a6e5d" stroke-width="4"/>
+              <path d="M25 40L35 50L55 30" stroke="#5a6e5d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <h1 style="color: var(--color-sage-green); margin-bottom: var(--spacing-md);">Thank You</h1>
+
+          <p class="text-large" style="margin-bottom: var(--spacing-lg);">
+            Your support means everything to us. Because of people like you, Echo Ridge Retreat can continue providing healing experiences through nature, creativity, and community.
+          </p>
+
+          <!-- Payment Confirmation Message -->
+          <div id="confirmation-message" class="card" style="background-color: var(--color-white); padding: var(--spacing-lg); margin-bottom: var(--spacing-lg);">
+            <p style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">
+              <strong>Your payment has been processed successfully.</strong>
+            </p>
+            <p style="font-size: var(--font-size-small); color: var(--color-warm-neutral);">
+              You will receive a confirmation email shortly with details of your contribution.
+            </p>
+            <p id="session-id-display" style="font-size: var(--font-size-small); color: var(--color-warm-neutral); margin-top: var(--spacing-sm);">
+              <!-- Session ID will be inserted here via JavaScript -->
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- What Happens Next Section -->
+    <section class="section-lg" style="background-color: var(--color-white);">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto;">
+          <h2 style="color: var(--color-sage-green); text-align: center; margin-bottom: var(--spacing-lg);">What Happens Next?</h2>
+
+          <div class="grid grid-3 gap-lg">
+
+            <!-- Step 1: Confirmation Email -->
+            <div class="text-center">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--color-soft-cream); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md);">
+                <span style="font-size: var(--font-size-h3); color: var(--color-sage-green);">1</span>
+              </div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Confirmation Email</h3>
+              <p style="font-size: var(--font-size-small);">
+                You'll receive a receipt and confirmation email from Stripe within the next few minutes.
+              </p>
+            </div>
+
+            <!-- Step 2: Thank You Letter (for donations) -->
+            <div id="donation-step" class="text-center">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--color-soft-cream); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md);">
+                <span style="font-size: var(--font-size-h3); color: var(--color-sage-green);">2</span>
+              </div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Personal Thank You</h3>
+              <p style="font-size: var(--font-size-small);">
+                Jason Howard personally reviews every contribution and sends a thank-you note to donors.
+              </p>
+            </div>
+
+            <!-- Step 2: Print Fulfillment (for print purchases) -->
+            <div id="print-step" class="text-center" style="display: none;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--color-soft-cream); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md);">
+                <span style="font-size: var(--font-size-h3); color: var(--color-sage-green);">2</span>
+              </div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Print Production</h3>
+              <p style="font-size: var(--font-size-small);">
+                Your limited edition print will be produced on archival paper and carefully inspected for quality.
+              </p>
+            </div>
+
+            <!-- Step 3: Impact Updates -->
+            <div id="updates-step-donation" class="text-center">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--color-soft-cream); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md);">
+                <span style="font-size: var(--font-size-h3); color: var(--color-sage-green);">3</span>
+              </div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Stay Connected</h3>
+              <p style="font-size: var(--font-size-small);">
+                We'll keep you updated on how your contribution is making a difference in our community.
+              </p>
+            </div>
+
+            <!-- Step 3: Shipping (for print purchases) -->
+            <div id="shipping-step" class="text-center" style="display: none;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background-color: var(--color-soft-cream); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md);">
+                <span style="font-size: var(--font-size-h3); color: var(--color-sage-green);">3</span>
+              </div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Secure Shipping</h3>
+              <p style="font-size: var(--font-size-small);">
+                Your print will be shipped flat in protective packaging within 7-10 business days. UK shipping is included.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Print Purchase Additional Info -->
+          <div id="print-additional-info" style="display: none; margin-top: var(--spacing-lg);">
+            <div class="card" style="background-color: var(--color-soft-cream); padding: var(--spacing-lg);">
+              <h3 style="color: var(--color-sage-green); margin-bottom: var(--spacing-md);">Your Limited Edition Print</h3>
+              <p style="margin-bottom: var(--spacing-sm);">
+                Each print includes:
+              </p>
+              <ul style="margin-bottom: 0;">
+                <li>Signed certificate of authenticity</li>
+                <li>Edition number (e.g., 12/50)</li>
+                <li>Archival quality giclée print (16x24 inches)</li>
+                <li>Artist's statement about the photograph</li>
+                <li>Care instructions for long-term preservation</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Your Impact Section -->
+    <section class="section-lg">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2 style="color: var(--color-sage-green); margin-bottom: var(--spacing-lg);">Your Impact</h2>
+          <p style="margin-bottom: var(--spacing-lg);">
+            Every contribution directly supports Echo Ridge Retreat's mission. Here's how your support helps:
+          </p>
+
+          <div class="grid grid-3 gap-md">
+            <div class="card">
+              <div class="card-content text-center">
+                <h3 class="card-title" style="color: var(--color-slate-blue); font-size: var(--font-size-h4);">Retreat Experiences</h3>
+                <p class="card-description" style="font-size: var(--font-size-small);">
+                  Fund weekly retreat programs for veterans and individuals navigating trauma and life transitions.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content text-center">
+                <h3 class="card-title" style="color: var(--color-slate-blue); font-size: var(--font-size-h4);">Creative Materials</h3>
+                <p class="card-description" style="font-size: var(--font-size-small);">
+                  Provide art supplies, photography equipment, and workshop materials for therapeutic activities.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content text-center">
+                <h3 class="card-title" style="color: var(--color-slate-blue); font-size: var(--font-size-h4);">Sanctuary Maintenance</h3>
+                <p class="card-description" style="font-size: var(--font-size-small);">
+                  Maintain the natural environment, facilities, and spaces that make healing possible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spread the Word Section -->
+    <section class="section-lg" style="background-color: var(--color-white);">
+      <div class="container">
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+          <h2 style="color: var(--color-sage-green); margin-bottom: var(--spacing-md);">Help Us Spread the Word</h2>
+          <p style="margin-bottom: var(--spacing-lg);">
+            Share Echo Ridge Retreat with others who might benefit from our mission or want to support healing through nature.
+          </p>
+
+          <!-- Social Share Buttons Placeholder -->
+          <div class="flex justify-center" style="gap: var(--spacing-sm); flex-wrap: wrap;">
+            <button class="button button-secondary" aria-label="Share on Facebook" disabled style="opacity: 0.6; cursor: not-allowed;">
+              Share on Facebook
+            </button>
+            <button class="button button-secondary" aria-label="Share on Twitter" disabled style="opacity: 0.6; cursor: not-allowed;">
+              Share on Twitter
+            </button>
+            <button class="button button-secondary" aria-label="Share via Email" disabled style="opacity: 0.6; cursor: not-allowed;">
+              Share via Email
+            </button>
+          </div>
+          <p style="font-size: var(--font-size-small); color: var(--color-warm-neutral); margin-top: var(--spacing-sm);">
+            (Social sharing coming soon)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continue Exploring Section -->
+    <section class="section-lg" style="background-color: var(--color-soft-cream);">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <h2 style="color: var(--color-sage-green); margin-bottom: var(--spacing-lg);">Continue Exploring</h2>
+
+          <div class="grid grid-3 gap-lg">
+
+            <div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Learn More</h3>
+              <p style="font-size: var(--font-size-small); margin-bottom: var(--spacing-md);">
+                Discover Jason's story and the vision behind Echo Ridge Retreat.
+              </p>
+              <a href="/about.html" class="button button-secondary" data-track="cta_click" data-label="About from Thank You Page">
+                About Us
+              </a>
+            </div>
+
+            <div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">The Retreat</h3>
+              <p style="font-size: var(--font-size-small); margin-bottom: var(--spacing-md);">
+                Explore what a typical retreat experience looks like.
+              </p>
+              <a href="/retreat.html" class="button button-secondary" data-track="cta_click" data-label="Retreat from Thank You Page">
+                The Experience
+              </a>
+            </div>
+
+            <div>
+              <h3 style="color: var(--color-charcoal); margin-bottom: var(--spacing-sm);">Get in Touch</h3>
+              <p style="font-size: var(--font-size-small); margin-bottom: var(--spacing-md);">
+                Have questions or want to learn more about partnerships?
+              </p>
+              <a href="/contact.html" class="button button-secondary" data-track="cta_click" data-label="Contact from Thank You Page">
+                Contact Us
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid grid-3 gap-lg mb-lg">
+        <div>
+          <h3 style="color: var(--color-white); margin-bottom: var(--spacing-md);">Echo Ridge Retreat</h3>
+          <p style="color: var(--color-soft-cream); font-size: var(--font-size-small);">
+            A sanctuary for healing through nature, creativity, and community.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Quick Links</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: var(--spacing-xs);"><a href="/about.html" style="color: var(--color-soft-cream);">About</a></li>
+            <li style="margin-bottom: var(--spacing-xs);"><a href="/retreat.html" style="color: var(--color-soft-cream);">The Retreat</a></li>
+            <li style="margin-bottom: var(--spacing-xs);"><a href="/photographs.html" style="color: var(--color-soft-cream);">Photographs</a></li>
+            <li style="margin-bottom: var(--spacing-xs);"><a href="/support.html" style="color: var(--color-soft-cream);">Support Us</a></li>
+            <li style="margin-bottom: var(--spacing-xs);"><a href="/contact.html" style="color: var(--color-soft-cream);">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-white); margin-bottom: var(--spacing-sm);">Contact</h4>
+          <p style="color: var(--color-soft-cream); font-size: var(--font-size-small);">
+            Email: <a href="mailto:info@echoridgeretreat.com" style="color: var(--color-soft-cream);">info@echoridgeretreat.com</a>
+          </p>
+        </div>
+      </div>
+      <hr style="border-color: rgba(245, 245, 240, 0.2); margin: var(--spacing-lg) 0;">
+      <div class="text-center">
+        <p style="color: var(--color-soft-cream); font-size: var(--font-size-small);">
+          &copy; 2025 Echo Ridge Retreat. All rights reserved. | <a href="/privacy.html" style="color: var(--color-soft-cream);">Privacy Policy</a> | <a href="/terms.html" style="color: var(--color-soft-cream);">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/js/main.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
+  <script>
+    // Extract session_id from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session_id');
+
+    if (sessionId) {
+      // Display session ID for reference (optional)
+      const sessionDisplay = document.getElementById('session-id-display');
+      if (sessionDisplay) {
+        sessionDisplay.innerHTML = `<small>Reference: ${sessionId.substring(0, 20)}...</small>`;
+      }
+
+      // Fire GA4 purchase event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'purchase', {
+          'event_category': 'ecommerce',
+          'transaction_id': sessionId
+        });
+      }
+
+      // Detect if this was a print purchase based on URL parameter or referrer
+      const productType = urlParams.get('product_type'); // Can be added to Stripe success URL
+
+      if (productType === 'print') {
+        // Show print-specific content
+        document.getElementById('donation-step').style.display = 'none';
+        document.getElementById('updates-step-donation').style.display = 'none';
+        document.getElementById('print-step').style.display = 'block';
+        document.getElementById('shipping-step').style.display = 'block';
+        document.getElementById('print-additional-info').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* ============================================
+   Echo Ridge Retreat - Main CSS
+   Core variables, reset, and base styles
+   ============================================ */
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Color Palette */
+  --color-sage-green: #5a6e5d; /* Darkened for WCAG AA contrast (was #6B7F6E) */
+  --color-charcoal: #3A3A3A;
+  --color-soft-cream: #F5F5F0;
+  --color-slate-blue: #4a6980; /* Darkened for better contrast (was #5B7A91) */
+  --color-warm-neutral: #6d6051; /* Darkened for WCAG AA compliance (was #8B7D6B) */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Typography */
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Type Scale (Desktop) */
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 22px;
+  --font-size-body: 18px;
+  --font-size-small: 14px;
+  --font-size-button: 16px;
+
+  /* Line Heights */
+  --line-height-h1: 52px;
+  --line-height-h2: 40px;
+  --line-height-h3: 32px;
+  --line-height-h4: 28px;
+  --line-height-body: 28px;
+  --line-height-small: 20px;
+  --line-height-button: 24px;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 96px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --content-padding: 20px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-medium: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Typography (Tablet) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  :root {
+    --font-size-h1: 42px;
+    --font-size-h2: 32px;
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
+    --font-size-body: 17px;
+  }
+}
+
+/* Responsive Typography (Mobile) */
+@media (max-width: 767px) {
+  :root {
+    --font-size-h1: 36px;
+    --font-size-h2: 28px;
+    --font-size-h3: 22px;
+    --font-size-h4: 18px;
+    --font-size-body: 16px;
+    --line-height-h1: 42px;
+    --line-height-h2: 34px;
+    --line-height-h3: 28px;
+    --line-height-body: 24px;
+  }
+}
+
+/* ============================================
+   CSS Reset and Base Styles
+   ============================================ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Root and body */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-soft-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+a {
+  color: var(--color-slate-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-sage-green);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--color-slate-blue);
+  outline-offset: 2px;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Figures */
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: var(--font-size-small);
+  color: var(--color-warm-neutral);
+  margin-top: var(--spacing-xs);
+}
+
+/* Code */
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-warm-neutral);
+  margin: var(--spacing-lg) 0;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-sage-green);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-sage-green);
+  color: var(--color-white);
+}
+
+/* Focus visible (for keyboard navigation) */
+:focus-visible {
+  outline: 2px solid var(--color-slate-blue);
+  outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
